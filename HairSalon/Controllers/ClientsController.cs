@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.Linq;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.AspNetCore.Mvc.Rendering;
+using System;
 
 namespace HairSalon.Controllers
 {
@@ -78,12 +79,12 @@ namespace HairSalon.Controllers
       return View(thisClient);
     }
 
-    [HttpPost, ActionName("AddAppointment")]
+    [HttpPost, ActionName("Appointment")]
     public ActionResult AddAppointment(Client client)
     {
       _db.Entry(client).State = EntityState.Modified;
       _db.SaveChanges();
-      return RedirectToAction("Index");
+      return RedirectToAction("Details", new { id = client.ClientId });
     }
   }
 }

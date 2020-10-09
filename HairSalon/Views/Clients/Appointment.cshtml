@@ -1,34 +1,20 @@
 @{
   Layout = "_Layout";
 }
-@using HairSalon.Models;
+
 @model HairSalon.Models.Client;
-@* @model List<HairSalon.Models.Client>; *@
-
-
 
 <h4>Add an appointment</h4> 
 
 @using (Html.BeginForm())
 {
+  @* @Html.HiddenFor(model => model.ClientId) *@
+
   @Html.LabelFor(model => model.Appointment)
   @Html.TextBoxFor(model => model.Appointment)
 
 
-  <input type="submit" value="AddAppointment" class="btn btn-default"/>
+  <input type="submit" value="Add" class="btn btn-default"/>
 }
 <p>@Html.ActionLink("Show all clients", "Index")</p>
 
-
-@* <h4>Add a new client</h4>
-@using (Html.BeginForm())
-{
-    @Html.LabelFor(model => model.Description)
-    @Html.TextBoxFor(model => model.Description)
-
-     @Html.LabelFor(model => model.Stylist)
-    @Html.DropDownList("StylistId")
-
-    <input type="submit" value="Add new client" class="btn btn-default"/>
-}
-<p>@Html.ActionLink("Show all clients", "Index")</p> *@
