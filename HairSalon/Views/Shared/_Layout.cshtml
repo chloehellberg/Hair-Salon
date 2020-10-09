@@ -4,11 +4,29 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
    <link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css'>
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="~/css/styles.css">
   <title>Eau Claire's Hair Salon</title>
 </head>
-<body>
+<body style ="font-family: 'Montserrat', sans-serif; ">
 <div class="container">
+  <div class="w3-top">
+    <div class="w3-bar" id="myNavbar">
+      <a class="w3-bar-item w3-button w3-hover-black w3-hide-medium w3-hide-large w3-right" href="javascript:void(0);" onclick="toggleFunction()" title="Toggle Navigation Menu">
+      <i class="fa fa-bars"></i>
+    </a>
+    <button class="w3-bar-item w3-button"><i class="fa fa-home"></i>@Html.ActionLink("Home", "Index", "Home")</button>
+    <button class="w3-bar-item w3-button w3-hide-small"><i class="fa fa-user"></i>@Html.ActionLink("Stylists", "Index","Stylists")</button>
+    <button class="w3-bar-item w3-button w3-hide-small"><i class="fa fa-address-book"></i> @Html.ActionLink("Clients", "Index","Clients")</button>
+    @* <button class="w3-bar-item w3-button w3-hide-small"><i class="fa fa-pencil-square-o"></i> @Html.ActionLink("See all reviews", "Index", "Reviews")</button>
+    <button class="w3-bar-item w3-button w3-hide-small w3-right w3-hover-red"><i class="fa fa-search">@Html.ActionLink("Search", "Index", "Search")</i></button> *@
+    </div>
+  </div>
+<br>
+<br>
 @RenderBody()
   </div>
 </body>
