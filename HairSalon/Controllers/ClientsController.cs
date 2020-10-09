@@ -78,12 +78,12 @@ namespace HairSalon.Controllers
       return View(thisClient);
     }
 
-    // [HttpPost]
-    // public ActionResult Add(Client client)
-    // {
-    //   _db.Clients.Add(client);
-    //   _db.SaveChanges();
-    //   return RedirectToAction("Index");
-    // }
+    [HttpPost, ActionName("AddAppointment")]
+    public ActionResult AddAppointment(Client client)
+    {
+      _db.Entry(client).State = EntityState.Modified;
+      _db.SaveChanges();
+      return RedirectToAction("Index");
+    }
   }
 }
