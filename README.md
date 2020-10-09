@@ -11,7 +11,8 @@ _This is an MVC web application for a hair salon owner to help manage their empl
     * See list of stylists
     * Select a stylist and see their details including a list of all clients that belong to that stylist
     * Add stylists to the database when they are hired
-    * Add new clients to a specific stylist.
+    * Add new clients to a specific stylist
+    * Add an appointment for a client
   
 
 ## Setup/Installation Requirements
@@ -43,7 +44,7 @@ _This is an MVC web application for a hair salon owner to help manage their empl
 
 ## Known Bugs
 
-_There are no known bugs at this time._
+_The appointment button currently doesn't work. When an appointment is added to a client it deletes that client name from the database._
 
 ## Support and contact details
 
