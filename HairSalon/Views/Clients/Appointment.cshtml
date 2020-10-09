@@ -8,7 +8,7 @@
 
 @using (Html.BeginForm())
 {
-  @* @Html.HiddenFor(model => model.ClientId) *@
+  @Html.HiddenFor(model => model.ClientId)
 
   @Html.LabelFor(model => model.Appointment)
   @Html.TextBoxFor(model => model.Appointment)
