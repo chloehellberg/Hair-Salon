@@ -1,4 +1,4 @@
-# _Eau Claire's Salon_
+# _Eau Claire's Salon Project_
 
 #### _Console application for a hair salon using C#/.NET, MySQL and Entity Framework, Oct 9th 2020_
 
